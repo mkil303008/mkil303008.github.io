@@ -120,3 +120,18 @@ img.dibley {
 	grid-column-end:   4;
 	background-color: MediumAquaMarine;  
 }
+
+
+.active {
+    background-color: grey;
+}
+
+.active a {
+	color: black;	
+}
+
+.home_page_img img{
+    width: 50%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
