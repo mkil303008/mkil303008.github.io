@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Lastname Firstname: 225</title>
+    <title>About: Mark Killion</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
     <!-- Bootstrap core CSS -->
     <link href="css/styles.css" rel="stylesheet">
@@ -17,7 +17,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">Firstname Lastname</a>
+    <a class="navbar-brand" href="#">Mark Killion</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -48,15 +48,34 @@
     <div id="content"></div>
 
     <script>
+	
+	    const my_bio = 'Hello Class!  My name is Mark Killion.  I live in Chicago, Illinois with my wife and son. I am a professional who decided to come back to school to finally finish his degree.  My current title at work is “Lead – Advanced Analytics”, but I am basically a database developer specializing in the Microsoft Business Intelligence Stack. I spend most of my day writing SQL code, investigating issues, building ETL packages with SSIS, and developing reports with SSRS. I also maintain a front-end website that I built using HTML, CSS, JavaScript, and asp.net.  This front-end website is the interface for my database application. It is a pleasure to meet you!';
+	
         const user = {
-            name: '',
-            imageUrl: '',
-            bio: ''
+            name: 'Mark Killion',
+            imageUrl: './images/profile_pic_200px.png',
+            bio: my_bio
         };
 
         // Step one - Create a React element
+			
+			 const h1 = React.createElement('h1', null, user.name);
+			
+			 const my_img = React.createElement('img', {
+														  src: user.imageUrl,
+														  alt: 'Profile picture for Mark Killion.',
+													   });
+
+             const my_content = React.createElement('p', null, user.bio);  
 
         // Step 2: Render the React element
+
+            ReactDOM.render(h1, document.getElementById('h1'));
+
+			ReactDOM.render(my_img, document.getElementById('img'));
+			
+			ReactDOM.render(my_content, document.getElementById('content'));
+
 
     </script>
 
